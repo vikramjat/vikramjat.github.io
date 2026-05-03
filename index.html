@@ -335,16 +335,31 @@
             .left-column {
                 flex: 0 0 65% !important;
                 width: auto !important;
+                order: 0 !important;
             }
             .right-column {
                 flex: 0 0 calc(35% - 15px) !important;
                 width: auto !important;
+                display: block !important;
+            }
+            .right-column .right-section {
+                order: 0 !important;
             }
             .container {
                 padding: 0 !important;
             }
             .earlier-roles-grid {
                 grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        /* Screen-only: increase job-entry spacing in left column to balance with right column whitespace */
+        @media screen and (min-width: 769px) {
+            .left-column .job-entry {
+                margin-bottom: 18px;
+            }
+            .left-column .job-entry:last-child {
+                margin-bottom: 0;
             }
         }
 
@@ -364,6 +379,15 @@
                 flex: none; 
                 width: 100%; 
             }
+
+            /* On mobile, dissolve right-column so its children flow with left-column,
+               then push Earlier Experience to appear right after Professional Experience */
+            .right-column {
+                display: contents;
+            }
+            .left-column { order: 1; }
+            .right-section-earlier { order: 2; }
+            .right-column .right-section:not(.right-section-earlier) { order: 3; }
 
             .right-section .section-title {
                 font-size: 12pt; 
@@ -530,7 +554,7 @@
                     </ul>
                 </div>
 
-                <div class="right-section">
+                <div class="right-section right-section-earlier">
                     <div class="section-title">EARLIER EXPERIENCE</div>
                     <div class="earlier-roles-compact">
                         <div class="earlier-role">
