@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Vikram Singh's Profile</title>
-    <meta name="description" content="Product Leader with 15+ years experience building and scaling digital products across Fintech, E-commerce, and Healthtech.">
+    <meta name="description" content="Product Leader and Founder with 15+ years building and scaling digital products across Fintech, E-commerce, and Healthtech. Currently building FaceLive.">
     
-    <meta property="og:title" content="Vikram Singh | Product Leader (IIT, IIM)">
-    <meta property="og:description" content="CPO driving product-led growth from Seed to profitability, $600M+ disbursements, and $2B+ payments processed.">
+    <meta property="og:title" content="Vikram Singh | Product Leader & Founder (IIT, IIM)">
+    <meta property="og:description" content="Founder of FaceLive — India's verified identity and social trust graph. Prior: $600M+ disbursements, $2B+ payments processed.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://vikramjat.github.io/">
 
@@ -21,15 +21,15 @@
         }
         
         @page {
-            /* Set Top, Right, Bottom, Left margins to 1.0in 0.5in 1.0in 0.5in */
+            /* Tightened top/bottom margins to fit one page */
             size: A4;
-            margin: 1.0in 0.5in 1.0in 0.5in; 
+            margin: 0.6in 0.5in 0.5in 0.5in; 
         }
         
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
-            font-size: 10pt;
-            line-height: 1.25;
+            font-size: 9.5pt;
+            line-height: 1.22;
             color: #000;
             background: white;
         }
@@ -43,16 +43,16 @@
         /* Header */
         .header {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border-bottom: 2px solid #2c3e50;
-            padding-bottom: 6px;
+            padding-bottom: 5px;
         }
         
         .header h1 {
             font-size: 22pt;
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
             letter-spacing: 1px;
         }
         
@@ -72,7 +72,7 @@
 
         /* Summary Section */
         .summary-section {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .section-title {
@@ -81,14 +81,14 @@
             color: #2c3e50;
             text-transform: uppercase;
             border-bottom: 1.5px solid #2c3e50;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             padding-bottom: 2px;
             letter-spacing: 0.5px;
         }
         
         .summary-text {
             font-size: 10pt;
-            line-height: 1.35;
+            line-height: 1.3;
             text-align: justify;
         }
         
@@ -110,12 +110,12 @@
         
         /* Add spacing after each company's bullet points */
         .job-entry {
-            margin-bottom: 15px; /* Increased spacing between companies */
+            margin-bottom: 8px;
         }
 
         .job-header {
-            margin-bottom: 4px;
-            margin-top: 8px;
+            margin-bottom: 3px;
+            margin-top: 4px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -170,13 +170,13 @@
         }
         
         li {
-            margin-bottom: 2px;
-            line-height: 1.3;
+            margin-bottom: 1px;
+            line-height: 1.25;
         }
         
         /* Right Column Sections */
         .right-section {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .right-section .section-title {
@@ -234,25 +234,25 @@
             /* No margin-top or display: block, allowing it to flow below */
         }        
         .strengths-list {
-            font-size: 9.5pt;
-            line-height: 1.4;
+            font-size: 9pt;
+            line-height: 1.3;
         }
         
         .strength-category {
             font-weight: bold;
             color: #2c3e50;
             display: block;
-            margin-top: 4px;
+            margin-top: 3px;
             margin-bottom: 1px;
         }
         
         .achievements-list {
-            font-size: 9.5pt;
-            line-height: 1.35;
+            font-size: 9pt;
+            line-height: 1.3;
         }
         
         .achievements-list li {
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
         
         strong {
@@ -280,11 +280,71 @@
             margin-top: 0; /* Reduce top margin within the grid */
             align-items: flex-start; /* Align logo and text to top */
         }
+
+        /* Compact single-column earlier roles (right column) */
+        .earlier-roles-compact {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .earlier-role {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 9pt;
+            line-height: 1.25;
+        }
+
+        .earlier-logo {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .earlier-details {
+            flex: 1;
+        }
+
+        .earlier-title {
+            font-weight: bold;
+            color: #000;
+            display: block;
+            font-size: 9.5pt;
+        }
+
+        .earlier-role .company-name {
+            font-size: 9pt;
+        }
+
+        .earlier-role .date {
+            font-size: 8.5pt;
+        }
         
         @media print {
             body {
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
+            }
+            /* Force 2-column layout in print regardless of rendered viewport width */
+            .content-wrapper {
+                flex-direction: row !important;
+                gap: 15px !important;
+            }
+            .left-column {
+                flex: 0 0 65% !important;
+                width: auto !important;
+            }
+            .right-column {
+                flex: 0 0 calc(35% - 15px) !important;
+                width: auto !important;
+            }
+            .container {
+                padding: 0 !important;
+            }
+            .earlier-roles-grid {
+                grid-template-columns: 1fr 1fr !important;
             }
         }
 
@@ -331,134 +391,88 @@
         <div class="summary-section">
             <div class="section-title">EXECUTIVE SUMMARY</div>
             <div class="summary-text">
-                Product Leader with 15+ years building and scaling digital products across fintech, e-commerce, and healthtech. Proven track record of driving product-led growth from Seed Stage to profitability, leading teams of 20+ members, and delivering $600M+ in loan disbursements and $2B+ in payment processing. Expert in 0-to-1 product development, strategic pivots, and multi-stakeholder partnerships with RBI-regulated entities. Strong technical foundation (IIT, IIM) combined with business acumen to drive sustainable growth and profitability.
+                Product Leader and Founder with 15+ years building and scaling digital products across fintech, e-commerce, and healthtech. Currently building <strong>FaceLive</strong> — India's verified identity and social trust graph powered by AI/VLM-driven face recognition. Prior track record of product-led growth from Seed to profitability, leading teams of 20+, and delivering <strong>$600M+ in disbursements</strong> and <strong>$2B+ in payments processed</strong>. Expert in 0-to-1 development, strategic pivots, and partnerships with RBI/NPCI/IRDAI-regulated entities. Strong technical foundation (IIT, IIM) combined with sharp business acumen.
             </div>
         </div>
         
         <div class="content-wrapper">
             <div class="left-column">
                 <div class="section-title">PROFESSIONAL EXPERIENCE</div>
-                
+
                 <div class="job-entry">
                     <div class="job-header">
-                        <img src="freo_icon.jpeg" alt="Freo" class="company-logo">
+                        <img src="./facelive_logo.png" alt="FaceLive" class="company-logo">
                         <div class="job-details">
-                            <span class="job-title">HEAD OF PRODUCT</span>
-                            <a href="https://freo.money/" target="_blank" class="company-name">Freo (MoneyTap)</a> | <span class="date">Jan 2024 – Dec 2025</span>
+                            <span class="job-title">FOUNDER &amp; CEO</span>
+                            <a href="https://facelive.app/" target="_blank" class="company-name">FaceLive</a> | <span class="date">Jan 2026 – Present</span>
                         </div>
                     </div>
-                    <div class="subsection">Business Transformation & Profitability</div>
                     <ul>
-                        <li>Led product strategy to achieve <strong>$15M ARR with EBITDA profitability</strong> through portfolio optimization and product-led growth</li>
-                        <li>Scaled to <strong>52M users, 2M MAUs</strong>; improved cross-sell from 1.0 to 1.4 products/customer (+40%)</li>
-                        <li>Strategic pivot: shut down loss-making products; launched 4 new revenue-generating products</li>
+                        <li><strong>Vision:</strong> Building India's verified identity and social trust graph — an AI/VLM-powered platform that turns every face into a portable, Aadhaar-verified credential for access, payments, and trust</li>
+                        <li><strong>Product:</strong> Full-stack face recognition &amp; identity platform — Android edge app, FastAPI backend, and web — serving gated communities, corporate campuses, gyms, and education institutions (B2B2C)</li>
+                        <li><strong>Tech:</strong> Built end-to-end as solo founder using AI coding tools (Claude, Gemini, Cursor) — multi-camera CV pipeline (InsightFace, FAISS, liveness), DPDP-compliant consent infrastructure, multi-tenant cloud architecture</li>
+                        <li><strong>Adjacent:</strong> 29M GST records (biz.facelive.app) powering organic discovery and trust signals</li>
                     </ul>
-                    <div class="subsection">0-to-1 Product Innovation</div>
+                </div>
+
+                <div class="job-entry">
+                    <div class="job-header">
+                        <img src="./freo_icon.jpeg" alt="Freo" class="company-logo">
+                        <div class="job-details">
+                            <span class="job-title">HEAD OF PRODUCT</span>
+                            <a href="https://freo.money/" target="_blank" class="company-name">Freo (MoneyTap)</a> | <span class="date">Jan 2024 – Nov 2025</span>
+                        </div>
+                    </div>
                     <ul>
-                        <li><strong>Freo UPI:</strong> Launched with NPCI/ICICI, scaled to 100K monthly transactions organically</li>
-                        <li><strong>Freo Insurance:</strong> Built from scratch, scaled to 5,000 policies/month</li>
-                        <li><strong>Investment Products:</strong> Launched Fixed Deposits and Digital Gold partnerships</li>
-                        <li><strong>RuPay Credit Card:</strong> Co-branded card with Yes Bank, 1,000 to 5,000+ cards/month</li>
-                    </ul>
-                    <div class="subsection">Platform & Marketplace</div>
-                    <ul>
-                        <li>Built multi-lender marketplace: <strong>$30M monthly disbursement</strong> across 5 partners + NBFC</li>
-                        <li>Consolidated 4 apps into unified platform, reducing CAC by 20%</li>
+                        <li>Drove product strategy to <strong>$15M ARR with EBITDA profitability</strong>; scaled to <strong>52M users, 2M MAUs</strong>; cross-sell from 1.0 to 1.4 products/customer (+40%) via strategic pivot</li>
+                        <li><strong>0-to-1 launches:</strong> Freo UPI (NPCI/ICICI, 100K monthly txns), Freo Insurance (5K policies/month), Fixed Deposits + Digital Gold, RuPay Credit Card with Yes Bank (1K → 5K+ cards/month)</li>
+                        <li>Built multi-lender marketplace: <strong>$30M monthly disbursement</strong> across 5 partners + NBFC; consolidated 4 apps into unified platform, reducing CAC by 20%</li>
                         <li>Led team of 12; deployed AI chatbot improving NPS to 56, reducing tickets by 30%</li>
                     </ul>
                 </div>
                 
                 <div class="job-entry">
                     <div class="job-header">
-                        <img src="SuperMoney_icon.png" alt="Super.Money" class="company-logo">
+                        <img src="./SuperMoney_icon.png" alt="Super.Money" class="company-logo">
                         <div class="job-details">
                             <span class="job-title">PRODUCT LEADER</span>
                             <a href="https://super.money/" target="_blank" class="company-name">Super.Money (Flipkart)</a> | <span class="date">May 2023 – Sep 2023</span>
                         </div>
                     </div>
                     <ul>
-                        <li>Defined product strategy for India's building largest personal loans marketplace in India</li>
-                        <li>Led partnerships with Axis Bank, IDFC FIRST Bank and Credit Saison for digital loans lifecycle</li>
+                        <li>Defined product strategy for India's largest personal loans marketplace; led partnerships with Axis Bank, IDFC FIRST Bank, and Credit Saison for digital loans lifecycle</li>
                         <li>Built product, design, analytics function; aligned engineering across Flipkart ecosystem</li>
                     </ul>
                 </div>
                 
                 <div class="job-entry">
                     <div class="job-header">
-                        <img src="mPokket.png" alt="mPokket" class="company-logo">
+                        <img src="./mPokket.png" alt="mPokket" class="company-logo">
                         <div class="job-details">
                             <span class="job-title">HEAD OF PRODUCT</span>
                             <a href="https://www.mpokket.in/" target="_blank" class="company-name">mPokket Financial Services</a> | <span class="date">Jul 2021 – Mar 2023</span>
                         </div>
                     </div>
                     <ul>
-                        <li>5-year strategy for 100X growth; achieved <strong>$600M disbursals in FY23, 70% YoY growth</strong></li>
-                        <li>Scaled from 2M to 15M users; built proprietary LMS processing 200K daily transactions</li>
-                        <li>Launched salaried loans and micro-insurance for 4M customers; improved repeat rate by 18%</li>
-                        <li>Led team of 11; reduced support contacts by 60%, improved NPS by 10 points</li>
+                        <li>5-year strategy for 100X growth; achieved <strong>$600M disbursals in FY23, 70% YoY growth</strong>; scaled 2M → 15M users; built proprietary LMS at 200K daily transactions</li>
+                        <li>Launched salaried loans &amp; micro-insurance for 4M customers (+18% repeat); led team of 11; reduced support contacts by 60%, NPS +10 points</li>
                     </ul>
                 </div>
                 
                 <div class="job-entry">
                     <div class="job-header">
-                        <img src="Myntra.jpg" alt="Myntra" class="company-logo">
+                        <img src="./Myntra.jpg" alt="Myntra" class="company-logo">
                         <div class="job-details">
                             <span class="job-title">ASSOCIATE DIRECTOR, PRODUCT</span>
                             <a href="https://myntra.com/" target="_blank" class="company-name">Myntra (Flipkart Group)</a> | <span class="date">Jul 2017 – Jul 2021</span>
                         </div>
                     </div>
                     <ul>
-                        <li>Owned checkout & recommendations for 75M customers; led PMs and Data Analysts</li>
-                        <li>Increased prepaid orders 37% to 68%; improved payment success 57% to 72% (+1,500 bps)</li>
-                        <li>Processed <strong>$2B annually, 99.99% uptime</strong> via ML-based routing across 8 gateways</li>
-                        <li><strong>Flipkart Pay Later:</strong> 4M customers, 500K txns year one, +6% repeat rate</li>
-                        <li><strong>Myntra Credit:</strong> 7M customers, $110M refunds, +30% repeat rate</li>
+                        <li>Owned <strong>Payments &amp; Checkout Personalization</strong> for 75M customers using AI/ML — led PMs and Data Analysts; processed <strong>$2B annually, 99.99% uptime</strong> via ML-based smart routing across 8 gateways</li>
+                        <li>Increased prepaid orders <strong>37%→68%</strong>, payment success <strong>57%→72%</strong> (+1,500 bps); built <strong>Flipkart Pay Later</strong> (4M customers, 500K txns yr 1, +6% repeat) and <strong>Myntra Credit</strong> (7M customers, $110M refunds, +30% repeat)</li>
                     </ul>
                 </div>
                 
-                <div class="earlier-roles-grid">
-                    
-                    <div class="job-entry">
-                        <div class="job-header">
-                            <img src="seedoc.jpg" alt="seeDoc" class="company-logo">
-                            <div class="job-details">
-                                <span class="job-title">AVP – PRODUCTS</span>
-                                <a href="https://www.linkedin.com/company/seedoc/" target="_blank" class="company-name">seeDoc</a> | <span class="date">Jun 2015 – Jul 2017</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="job-entry">
-                        <div class="job-header">
-                            <img src="Axtria_Logo.png" alt="Axtria" class="company-logo">
-                            <div class="job-details">
-                                <span class="job-title">SR. ASSOCIATE</span>
-                                <a href="https://www.axtria.com/" target="_blank" class="company-name">Axtria India</a> | <span class="date">May 2013 – Mar 2015</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="job-entry">
-                        <div class="job-header">
-                            <img src="futures-first-logo.png" alt="Futures First" class="company-logo">
-                            <div class="job-details">
-                                <span class="job-title">ANALYST – INTL MARKETS</span>
-                                <a href="https://futuresfirst.com/" target="_blank" class="company-name">Futures First</a> | <span class="date">Apr 2012 – Apr 2013</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="job-entry">
-                        <div class="job-header">
-                            <img src="Samsung.png" alt="Samsung" class="company-logo">
-                            <div class="job-details">
-                                <span class="job-title">SR. SOFTWARE ENGINEER</span>
-                                <a href="https://samsung.com/" target="_blank" class="company-name">Samsung India</a> | <span class="date">Jul 2007 – Jun 2010</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
             
             <div class="right-column">
@@ -467,7 +481,7 @@
                     
                     <div class="education-item">
                         <div class="edu-header">
-                            <img src="iimkozhikode.png" alt="IIM Kozhikode Logo" class="edu-logo">
+                            <img src="./iimkozhikode.png" alt="IIM Kozhikode Logo" class="edu-logo">
                             <div class="edu-details">
                                 <span class="degree">PGDM (MBA), 2010 – 2012</span>
                                 <a href="https://www.iimk.ac.in/" target="_blank" class="institution-name">Indian Institute of Management Kozhikode</a>
@@ -477,9 +491,9 @@
 
                     <div class="education-item">
                         <div class="edu-header">
-                            <img src="iitkgp.png" alt="IIT Kharagpur Logo" class="edu-logo">
+                            <img src="./iitkgp.png" alt="IIT Kharagpur Logo" class="edu-logo">
                             <div class="edu-details">
-                                <span class="degree">B.Tech (E&ECE), 2003 – 2007</span>
+                                <span class="degree">B.Tech (E&amp;ECE), 2003 – 2007</span>
                                 <a href="https://www.iitkgp.ac.in/" target="_blank" class="institution-name">Indian Institute of Technology Kharagpur</a>
                             </div>
                         </div>
@@ -494,13 +508,13 @@
                         Product-Market Fit | Product-Led Growth | Strategic Pivots | 0-to-1 Development | Platform Architecture
                         
                         <span class="strength-category">Leadership</span>
-                        Team Building & Scaling | Cross-Functional Leadership | Hiring & Talent Development
+                        Team Building &amp; Scaling | Cross-Functional Leadership | Hiring &amp; Talent Development
                         
                         <span class="strength-category">Domain Expertise</span>
                         Fintech (Lending, Payments, UPI, Banking, Digital Gold, Insurance) | E-commerce | Marketplaces | Regulatory (RBI, NPCI, IRDAI)
                         
                         <span class="strength-category">Business Acumen</span>
-                        P&L Management | Unit Economics | Path to Profitability | CAC/LTV Optimization
+                        P&amp;L Management | Unit Economics | Path to Profitability | CAC/LTV Optimization
                     </div>
                 </div>
                 
@@ -515,11 +529,45 @@
                         <li><strong>Academic:</strong> CAT 99.18%ile | IIT-JEE AIR 300</li>
                     </ul>
                 </div>
+
+                <div class="right-section">
+                    <div class="section-title">EARLIER EXPERIENCE</div>
+                    <div class="earlier-roles-compact">
+                        <div class="earlier-role">
+                            <img src="./seedoc.jpg" alt="seeDoc" class="earlier-logo">
+                            <div class="earlier-details">
+                                <span class="earlier-title">AVP – Products</span>
+                                <a href="https://www.linkedin.com/company/seedoc/" target="_blank" class="company-name">seeDoc</a> <span class="date">| Jun 2015 – Jul 2017</span>
+                            </div>
+                        </div>
+                        <div class="earlier-role">
+                            <img src="./Axtria_Logo.png" alt="Axtria" class="earlier-logo">
+                            <div class="earlier-details">
+                                <span class="earlier-title">Sr. Associate</span>
+                                <a href="https://www.axtria.com/" target="_blank" class="company-name">Axtria India</a> <span class="date">| May 2013 – Mar 2015</span>
+                            </div>
+                        </div>
+                        <div class="earlier-role">
+                            <img src="./futures-first-logo.png" alt="Futures First" class="earlier-logo">
+                            <div class="earlier-details">
+                                <span class="earlier-title">Analyst – Intl Markets</span>
+                                <a href="https://futuresfirst.com/" target="_blank" class="company-name">Futures First</a> <span class="date">| Apr 2012 – Apr 2013</span>
+                            </div>
+                        </div>
+                        <div class="earlier-role">
+                            <img src="./Samsung.png" alt="Samsung" class="earlier-logo">
+                            <div class="earlier-details">
+                                <span class="earlier-title">Sr. Software Engineer</span>
+                                <a href="https://samsung.com/" target="_blank" class="company-name">Samsung India</a> <span class="date">| Jul 2007 – Jun 2010</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+
 </body>
 </html>
-
-
-
